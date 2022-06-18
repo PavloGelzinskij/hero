@@ -1,7 +1,7 @@
 import { Weather } from "../weather/weather";
 import { Environemnt } from "../environment/environment";
 import "p5";
-import { Vector2D } from "utils/vector";
+import { Vector2D } from "../utils/vector";
 
 export class Ground {
   constructor(private height: number) {}

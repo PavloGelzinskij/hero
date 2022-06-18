@@ -1,7 +1,7 @@
 import "p5";
-import { Environemnt } from "environment/environment";
-import { WeatherProvider } from "weather/weatherProvider";
-import { Hero } from "hero/hero";
+import { Environemnt } from "./environment/environment";
+import { WeatherProvider } from "./weather/weatherProvider";
+import { Hero } from "./hero/hero";
 
 const environment = new Environemnt();
 const weatherProvider = new WeatherProvider();

@@ -1,9 +1,9 @@
 import { Cloud } from "./cloud";
 import { Cloudiness, Weather } from "../weather/weather";
 import { Environemnt } from "./environment";
-import { drawGradient } from "utils/gradient";
+import { drawGradient } from "../utils/gradient";
 import "p5";
-import { Vector2D } from "utils/vector";
+import { Vector2D } from "../utils/vector";
 
 export class Sky {
   private clouds: Cloud[];
