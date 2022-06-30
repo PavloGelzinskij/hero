@@ -29812,14 +29812,16 @@ var Hero = /*#__PURE__*/function () {
       frameRate(50);
       this.position = this.position.add(this.jumpspeed);
 
-      if (keyIsDown(UP_ARROW) && this.position.y > 250) {
+      if (keyIsDown(32) && this.position.y > 250) {
         this.jumpspeed = new vector_1.Vector2D(0, 0);
-        this.jumpspeed = this.jumpspeed.add(new vector_1.Vector2D(0, -15));
+        this.jumpspeed = this.jumpspeed.add(new vector_1.Vector2D(0, -50));
       } else if (this.position.y === 350) {
+        this.jumpspeed = new vector_1.Vector2D(0, 0);
+      } else if (keyIsDown(32) && this.position.y != 350) {
         this.jumpspeed = new vector_1.Vector2D(0, 0);
       } else {
         this.jumpspeed = new vector_1.Vector2D(0, 0);
-        this.jumpspeed = this.jumpspeed.add(new vector_1.Vector2D(0, 15));
+        this.jumpspeed = this.jumpspeed.add(new vector_1.Vector2D(0, 10));
       }
     }
   }]);
@@ -29905,7 +29907,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62608" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53026" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

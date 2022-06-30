@@ -55,17 +55,22 @@ export class Hero {
     fill("blue");
     rect(this.position.x, this.position.y, 30, 30);
   }
-  jump() {
-    frameRate(50);
+  jump(){
+    frameRate(50)
     this.position = this.position.add(this.jumpspeed);
-    if (keyIsDown(UP_ARROW) && this.position.y > 250) {
+    if (keyIsDown(32) && this.position.y > 250) {
       this.jumpspeed = new Vector2D(0, 0);
-      this.jumpspeed = this.jumpspeed.add(new Vector2D(0, -15));
-    } else if (this.position.y === 350) {
+      this.jumpspeed = this.jumpspeed.add(new Vector2D(0, -50));
+    } 
+    else if (this.position.y === 350) {
       this.jumpspeed = new Vector2D(0, 0);
-    } else {
+    } 
+    else if(keyIsDown(32) && this.position.y != 350){
       this.jumpspeed = new Vector2D(0, 0);
-      this.jumpspeed = this.jumpspeed.add(new Vector2D(0, 15));
+    }
+    else {
+      this.jumpspeed = new Vector2D(0, 0);
+      this.jumpspeed = this.jumpspeed.add(new Vector2D(0, 10));
     }
   }
 }
